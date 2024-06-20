@@ -5,11 +5,7 @@ const require = createRequire(improt.meta.url);
 const sha256 = require("sha256");
 
 class HashUtil {
-	construct(msg) {
-		this.msg = msg;
-	}
-
-	generateHashForPrevNode(node) {
+	static generateHashForPrevNode(node) {
 		return sha256(JSON.stringify(node));
 	}
 
