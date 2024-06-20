@@ -1,0 +1,16 @@
+{
+  "name": "blockchain_from_scratch",
+  "version": "1.0.0",
+  "description": "Implemented blockchain from scratch for learning purpose.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "Blockchain",
+    "crypto"
+  ],
+  "author": "Md. Masud karim",
+  "license": "MIT"
+}
