@@ -1,4 +1,4 @@
-from {HashUtil} from "./HashUtil";
+import {HashUtil} from "./HashUtil";
 
 class BlockChain {
 	construct (message) {

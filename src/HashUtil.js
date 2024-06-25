@@ -1,6 +1,6 @@
-import createRequire from "module";
+import {createRequire} from "module";
 
-const require = createRequire(improt.meta.url);
+const require = createRequire(import.meta.url);
 
 const sha256 = require("sha256");
 

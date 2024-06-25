@@ -1,0 +1,3 @@
+message Msg {
+	int32 age = 1;
+}
