@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Blockchain net | Home page</title>
@@ -10,6 +13,7 @@
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			position: relative;
 		}
 
 		.form-container {
@@ -23,17 +27,87 @@
 			margin-top:5rem;
 		}
 
+		.vis-container { 
+			display: flex;
+			justify-content: end;
+			width: 100%;
+		 }
+
+		 .vis-container button {
+		 	border: none;
+		 	background-color: red;
+		 	color  : white;
+		 	padding : .5rem 2rem;
+		 	border-radius: 7px;
+		 	cursor: pointer;
+		 }
+
+		 .vis-container-window {
+		 	display: flex;
+		 	flex-direction: row; 
+		  }
+
+		  .vis-win {
+		  	width: 35rem;
+		  	background-color: #FF33FF;
+		  	height: 100vh;
+		  	display: none;
+		  }
+
+		  .left-win {
+		  	display: flex;
+		  	flex-direction: column;
+		  	align-items: center;
+		  }
+
+
+
 	</style>
+
+	<script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+
+	<script type="text/javascript">
+		let clicked = false;
+		function showvis() {
+			$("#vis-win").animate({width:'toggle'},350);
+			// $("#vis-btn").toggleCss("background-color","black");
+			$("#vis-btn").toggleClass("black");
+			$("#vis-btn").attr("value","Close vis window");
+		}
+
+		let tween1 = KUTE.to('#dd',{width:200});
+		console.log(tween1);
+		tween1.start()
+
+	</script>
 </head>
 <body class="container">
+	<div class = "vis-container" name ="nav">
+		<button id = "vis-btn" onclick = "showvis()">Use the visualizer</button>
+	</div>
+	<div class = "vis-container-window">
 
-	<h1>Welcome to the blockchain net</h1>
-	<strong>Enter your message along with other data and wait for a miner to mine the block into the blockchain ledger.</strong>
+	<div class = "left-win">
+			
+		<h1>Welcome to the blockchain net</h1>
+		<strong>Enter your message along with other data and wait for a miner to mine the block into the blockchain ledger.</strong>
 
-	<form class ="form-container margin-top-5" method ="GET" action = "#">
-		<textarea rows = "15" cols = "70" placeholder="Enter your message here" name = "msg"> </textarea>
-		<input type = "text" placeholder="Enter the subject of the message" name ="sub"/>
-		<input type = "submit" value = "Submit data"/>
-	</form>
+		<form class ="form-container margin-top-5" method ="GET" action = "#">
+			<textarea rows = "15" cols = "70" placeholder="Enter your message here" name = "msg"> </textarea>
+			<input type = "text" placeholder="Enter the subject of the message" name ="sub"/>
+			<input type = "submit" value = "Submit data"/>
+		</form>
+	</div>
+
+	<div id = "dd" style = "background-color : red;,width : 100px">
+		dfd
+	</div>
+		
+	<div class = "vis-win" id = "vis-win">data</div>
+
+
+	</div>
+
+
 </body>
 </html>
