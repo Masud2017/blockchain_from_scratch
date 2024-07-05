@@ -8,8 +8,6 @@ class HashUtil {
 	static generateHashForPrevNode(node) {
 		return sha256(JSON.stringify(node));
 	}
-
-
 }
 
 export default HashUtil;
