@@ -19,7 +19,7 @@ class ProofOfWork {
      * @param {*} complexity 
      * @param {*} prefix 
      */
-    constructor(complexity = 10, prefix = "abcd") {
+    constructor(complexity = (Math.random()*1000), prefix = "abcd") {
         this.complexity = complexity;
         this.prefix = Buffer.from(prefix, 'hex');
         this.solver = new pow.Solver();
