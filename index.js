@@ -20,4 +20,6 @@ app.get("/nun",function(req,res) {
 	res.render("index.html",{"name":"Md.Masud karim","age":"24"});
 })
 
+console.log("Listening to port 4444");
+
 app.listen("4444")
